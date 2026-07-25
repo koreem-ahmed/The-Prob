@@ -6,7 +6,7 @@ https://koreem-ahmed.itch.io/the-prob
 ## Controls:
 movement -> arrows
 
-jump -> C
+jump -> c
 
 light attack -> x
 
