@@ -5,6 +5,9 @@ extends CharacterBody2D
 @onready var atk1_coll = $attack_1_area/attack_1_coll
 @onready var atk2_marker = $attack_2_marker
 @onready var score_label = $score
+@onready var slash_sound: AudioStreamPlayer = $"Slash sound"
+@onready var magic_hit: AudioStreamPlayer = $"magic hit"
+
 
 const SPEED = 200
 const JUMP_FORCE = -250
@@ -61,6 +64,7 @@ func _physics_process(delta):
 			is_attacking = true
 			atk1_coll.disabled = false
 			anim.play("attack1")
+			slash_sound.play()
 			return
 	
 		if Input.is_action_just_pressed("attack 2") and not is_attacking and Global.mana >= 40:
@@ -69,6 +73,9 @@ func _physics_process(delta):
 			shoot_after_attack = true
 			shoot_bullet()
 			anim.play("attack2")
+			magic_hit.play()
+			await get_tree().create_timer(0.45).timeout
+			magic_hit.stop()
 			return
 	
 		var dir = Input.get_axis("move_left", "move_right")

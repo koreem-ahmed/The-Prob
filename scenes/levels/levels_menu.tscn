@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://64r312bq3qky" path="res://assets/snow BG/snow-bg 3.png" id="4_rwf0f"]
 [ext_resource type="Texture2D" uid="uid://tar1ie1or2oy" path="res://assets/snow BG/snow-bg 4.png" id="5_c5w54"]
 [ext_resource type="Theme" uid="uid://bhd87hhhi56b6" path="res://assets/buttons.tres" id="6_y7xam"]
+[ext_resource type="AudioStream" uid="uid://bhtqmq05ah3r2" path="res://assets/Sounds/437416__fredericfont__puckr-music-level-4-258bpm.wav" id="9_c5w54"]
 [ext_resource type="PackedScene" uid="uid://dbw4gyuwvgh6s" path="res://scenes/control/transition_layer.tscn" id="9_rwf0f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pca5m"]
@@ -181,6 +182,11 @@ emission_shape = 3
 emission_rect_extents = Vector2(548, 1)
 gravity = Vector2(-50, 100)
 scale_amount_max = 2.0
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=1789859992]
+stream = ExtResource("9_c5w54")
+volume_db = -12.0
+autoplay = true
 
 [connection signal="pressed" from="level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="level 2" to="." method="_on_level_2_pressed"]

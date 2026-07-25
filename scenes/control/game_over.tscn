@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://bhd87hhhi56b6" path="res://assets/buttons.tres" id="1_6e148"]
 [ext_resource type="Script" uid="uid://vj4likqdkswr" path="res://scripts/game_over.gd" id="1_cpvhv"]
 [ext_resource type="PackedScene" uid="uid://dbw4gyuwvgh6s" path="res://scenes/control/transition_layer.tscn" id="3_dorgi"]
+[ext_resource type="AudioStream" uid="uid://c1la2x4wnoda0" path="res://assets/Sounds/767605__minimalistiga__gameover-sfx.wav" id="4_3xuv0"]
 
 [node name="Game over" type="CanvasLayer" unique_id=1317518215]
 process_mode = 3
@@ -44,6 +45,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="transition layer" parent="." unique_id=995275152 instance=ExtResource("3_dorgi")]
+
+[node name="gameover" type="AudioStreamPlayer" parent="." unique_id=287556079]
+stream = ExtResource("4_3xuv0")
 
 [connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

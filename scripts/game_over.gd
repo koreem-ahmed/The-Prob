@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@onready var gameover: AudioStreamPlayer = $gameover
+
 
 func _ready() -> void:
 	self.hide()
@@ -21,3 +23,4 @@ func _on_quit_pressed() -> void:
 func game_over():
 	get_tree().paused = true
 	self.show()
+	gameover.play()

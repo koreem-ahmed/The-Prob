@@ -4,6 +4,7 @@ extends Control
 @onready var level_2_bocker_2: ColorRect = $"level 2 bocker2"
 @onready var level_3_bocker: ColorRect = $"level 3 bocker"
 @onready var level_3_bocker_2: ColorRect = $"level 3 bocker2"
+@onready var button_click: AudioStreamPlayer = $"button click"
 
 func _ready() -> void:
 	Global.score = 0

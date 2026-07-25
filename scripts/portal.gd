@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var winning_sound: AudioStreamPlayer = $"Winning sound"
+
 
 func _on_body_entered(body):
 	if body == Global.player:
@@ -12,10 +14,12 @@ func _on_body_entered(body):
 
 func _change_level():
 	TransitionLayer._transition()
+	winning_sound.play()
 	await TransitionLayer.transitioned
 	get_tree().change_scene_to_file("res://scenes/levels/levels_menu.tscn")
 
 func _final_win():
 	TransitionLayer._transition()
+	winning_sound.play()
 	await TransitionLayer.transitioned
 	get_tree().change_scene_to_file("res://scenes/control/winning.tscn")

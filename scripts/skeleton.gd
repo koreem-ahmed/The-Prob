@@ -9,6 +9,7 @@ extends Node2D
 @onready var detection_area: Area2D = $detection_area
 @onready var attack_col: CollisionShape2D = $attacking_area/attack_col
 @onready var detection_col: CollisionShape2D = $detection_area/detection_col
+@onready var dieing_sound: AudioStreamPlayer = $"dieing sound"
 
 const Speed = 60
 var direction = 1
@@ -30,6 +31,7 @@ func _physics_process(delta):
 	if death:
 		if animated.animation != "die":
 			animated.play("die")
+			dieing_sound.play()
 		return
 	
 	if not Global.player:
