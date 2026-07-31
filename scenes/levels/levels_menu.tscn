@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://64r312bq3qky" path="res://assets/snow BG/snow-bg 3.png" id="4_rwf0f"]
 [ext_resource type="Texture2D" uid="uid://tar1ie1or2oy" path="res://assets/snow BG/snow-bg 4.png" id="5_c5w54"]
 [ext_resource type="Theme" uid="uid://bhd87hhhi56b6" path="res://assets/buttons.tres" id="6_y7xam"]
+[ext_resource type="Texture2D" uid="uid://bonowev82um5e" path="res://assets/Lock.png" id="7_c5w54"]
 [ext_resource type="AudioStream" uid="uid://bhtqmq05ah3r2" path="res://assets/Sounds/437416__fredericfont__puckr-music-level-4-258bpm.wav" id="9_c5w54"]
 [ext_resource type="PackedScene" uid="uid://dbw4gyuwvgh6s" path="res://scenes/control/transition_layer.tscn" id="9_rwf0f"]
 
@@ -77,16 +78,20 @@ mouse_filter = 2
 texture = ExtResource("5_c5w54")
 
 [node name="Label" type="Label" parent="." unique_id=688278577]
-layout_mode = 0
-offset_left = -572.0
-offset_top = -125.0
-offset_right = 579.0
-offset_bottom = -50.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.423
+anchor_top = -0.23900001
+anchor_right = 0.41700003
+anchor_bottom = -0.066
+offset_left = 0.027008057
+offset_top = -0.12799072
+offset_right = -0.13302612
+offset_bottom = -0.23199844
 theme_override_fonts/font = SubResource("FontVariation_rwf0f")
 theme_override_font_sizes/font_size = 80
 text = "Levels"
 horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="level 1" type="Button" parent="." unique_id=594349456]
 z_index = 2
@@ -112,7 +117,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="level 3" type="Button" parent="." unique_id=1242220262]
 z_index = 2
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0151353
+anchor_bottom = 0.015135306
 offset_left = 165.0
 offset_top = 19.192326
 offset_right = 277.0
@@ -122,56 +130,13 @@ text = "3
 "
 metadata/_edit_use_anchors_ = true
 
-[node name="level 2 bocker" type="ColorRect" parent="." unique_id=1114364450]
-z_index = 2
-layout_mode = 0
-offset_left = -54.0
-offset_top = 33.192326
-offset_right = -41.0
-offset_bottom = 159.19232
-rotation = -0.7853982
-color = Color(0.331181, 0.353291, 0.353292, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="level 2 bocker2" type="ColorRect" parent="." unique_id=1339116666]
-z_index = 2
-layout_mode = 0
-offset_left = 40.0
-offset_top = 26.192326
-offset_right = 53.0
-offset_bottom = 152.19232
-rotation = 0.7853982
-color = Color(0.331181, 0.353291, 0.353292, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="level 3 bocker" type="ColorRect" parent="." unique_id=1037350911]
-z_index = 2
-layout_mode = 0
-offset_left = 173.00006
-offset_top = 23.192387
-offset_right = 186.00006
-offset_bottom = 149.19238
-rotation = -0.7853982
-color = Color(0.331181, 0.353291, 0.353292, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="level 3 bocker2" type="ColorRect" parent="." unique_id=829695052]
-z_index = 2
-layout_mode = 0
-offset_left = 263.0
-offset_top = 15.192295
-offset_right = 276.0
-offset_bottom = 141.19229
-rotation = 0.7853982
-color = Color(0.331181, 0.353291, 0.353292, 1)
-metadata/_edit_use_anchors_ = true
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1159250718]
 z_index = 1
 position = Vector2(-4, 0)
 zoom = Vector2(1.2, 1.2)
 
 [node name="transition layer" parent="." unique_id=995275152 instance=ExtResource("9_rwf0f")]
+visible = false
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=738241862]
 z_index = 1
@@ -187,6 +152,26 @@ scale_amount_max = 2.0
 stream = ExtResource("9_c5w54")
 volume_db = -12.0
 autoplay = true
+
+[node name="lock_lev_2" type="TextureRect" parent="." unique_id=872870745]
+z_index = 3
+layout_mode = 0
+offset_left = -76.0
+offset_top = -3.0
+offset_right = 52.0
+offset_bottom = 125.0
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("7_c5w54")
+
+[node name="lock_lev_3" type="TextureRect" parent="." unique_id=1083486744]
+z_index = 3
+layout_mode = 0
+offset_left = 148.0
+offset_top = -3.0
+offset_right = 276.0
+offset_bottom = 125.0
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("7_c5w54")
 
 [connection signal="pressed" from="level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="level 2" to="." method="_on_level_2_pressed"]

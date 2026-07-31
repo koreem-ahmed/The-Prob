@@ -19,7 +19,7 @@ shader = ExtResource("4_ybr10")
 base_font = SubResource("FontVariation_ybr10")
 variation_embolden = 1.25
 
-[node name="Node2D" type="Control" unique_id=1981337073]
+[node name="mainmenu" type="Control" unique_id=1981337073]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -25.0
@@ -28,9 +28,9 @@ offset_right = -25.0
 offset_bottom = 112.0
 script = ExtResource("1_8pq7m")
 
-[node name="Node" type="Node" parent="." unique_id=1274781947]
+[node name="bg layers" type="Node" parent="." unique_id=1274781947]
 
-[node name="layer 1" type="TextureRect" parent="Node" unique_id=2135463181]
+[node name="layer 1" type="TextureRect" parent="bg layers" unique_id=2135463181]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_45xpy")
 offset_left = -480.0
@@ -40,7 +40,7 @@ offset_bottom = -12.0
 mouse_filter = 2
 texture = ExtResource("5_12qgc")
 
-[node name="layer 2" type="TextureRect" parent="Node" unique_id=461890630]
+[node name="layer 2" type="TextureRect" parent="bg layers" unique_id=461890630]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_45xpy")
 offset_left = -477.0
@@ -50,7 +50,7 @@ offset_bottom = 156.0
 mouse_filter = 2
 texture = ExtResource("6_v16a6")
 
-[node name="layer 3" type="TextureRect" parent="Node" unique_id=1801224960]
+[node name="layer 3" type="TextureRect" parent="bg layers" unique_id=1801224960]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_45xpy")
 offset_left = -480.0
@@ -60,7 +60,7 @@ offset_bottom = 156.0
 mouse_filter = 2
 texture = ExtResource("7_lcxfl")
 
-[node name="layer 4" type="TextureRect" parent="Node" unique_id=370328568]
+[node name="layer 4" type="TextureRect" parent="bg layers" unique_id=370328568]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_45xpy")
 offset_left = -477.0
